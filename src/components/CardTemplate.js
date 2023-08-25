@@ -1,6 +1,5 @@
 import { Stack, Heading, Image, Text, Card, CardBody, CardFooter, Button } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { ArrowForwardIcon } from "@chakra-ui/icons";
 import React from "react";
 
 const CardTemplate = ({ title, description, imageSrc, link }) => {
@@ -23,12 +22,12 @@ const CardTemplate = ({ title, description, imageSrc, link }) => {
           as='a'
           href={link}
           variant='solid'
-          colorScheme='gray'
+          colorScheme='facebook'
           target='_blank'
           rel='noopener noreferrer'
+          rightIcon={<ArrowForwardIcon />}
         >
-          See moreㅤ
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          See more
         </Button>
       </CardFooter>
     </Card>

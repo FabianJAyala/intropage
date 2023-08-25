@@ -1,10 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 import useScrollDirection from "../hooks/useScrollDirection";
 
@@ -76,8 +72,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
               <a href="#projects" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
         </HStack>

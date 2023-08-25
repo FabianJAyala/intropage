@@ -17,7 +17,7 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import { useAlertContext } from "../context/alertContext";
 
-const LandingSection = () => {
+const ContactMeSection = () => {
   const { onOpen } = useAlertContext();
   const form = useRef();
 
@@ -53,8 +53,9 @@ const LandingSection = () => {
       backgroundColor="#2f2a65"
       py={8}
       spacing={8}
+      alignItems="center"
     >
-      <VStack w="1024px" p={32} alignItems="flex-start">
+      <VStack w="600px" p={8} alignItems="center">
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
@@ -89,7 +90,7 @@ const LandingSection = () => {
                     Freelance project proposal
                   </option>
                   <option value="openSource" style={{ backgroundColor: "#433f74", color: "white" }}>
-                    Open source consultancy session
+                    Full-time job proposal
                   </option>
                   <option value="other" style={{ backgroundColor: "#433f74", color: "white" }}>
                     Other
@@ -101,7 +102,7 @@ const LandingSection = () => {
                 <Textarea
                   id="comment"
                   name="comment"
-                  height={250}
+                  height={150}
                   placeholder="Comment..."
                   {...getFieldProps("comment")}
                 />
@@ -118,4 +119,4 @@ const LandingSection = () => {
   );
 };
 
-export default LandingSection;
+export default ContactMeSection;
