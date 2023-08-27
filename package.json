@@ -1,5 +1,6 @@
 {
   "name": "intropage",
+  "homepage": "https://fabiandevjourney.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
