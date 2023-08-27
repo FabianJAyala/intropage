@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Text } from "@chakra-ui/react";
 import useScrollDirection from "../hooks/useScrollDirection";
 
 const socials = [
@@ -23,16 +23,9 @@ const socials = [
   },
 ];
 
-const listSocials = socials.map(social => {
-  return (
-    <a href={social.url} style={{margin: 10}}>
-      <FontAwesomeIcon icon={social.icon} size="2x"/>
-    </a>
-  )
-});
-
 const Header = () => {
-  const handleClick = (anchor) => () => {
+  const handleClick = (anchor) => (event) => {
+    event.preventDefault();
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -43,11 +36,11 @@ const Header = () => {
     }
   };
 
-  const isHidden = useScrollDirection()
+  const isHidden = useScrollDirection();
 
   return (
     <Box
-      position= "sticky"
+      position="sticky"
       top={0}
       left={0}
       right={0}
@@ -58,22 +51,47 @@ const Header = () => {
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box
+        color="white"
+        maxWidth="1280px"
+        margin="0 auto"
+        px={4}
+        py={[2, 4]}
+      >
         <HStack
-          px={16}
-          py={4}
           justifyContent="space-between"
           alignItems="center"
+          wrap="wrap"
         >
           <nav>
-            <ul>
-              {listSocials}
-            </ul>
+            <HStack spacing={4}>
+              {socials.map((social) => (
+                <a
+                  key={social.url}
+                  href={social.url}
+                  style={{ margin: "0 1px" }}
+                >
+                  <FontAwesomeIcon icon={social.icon} size="2xl" />
+                </a>
+              ))}
+            </HStack>
           </nav>
           <nav>
-            <HStack spacing={8}>
-              <a href="#projects" onClick={handleClick("projects")}>Projects</a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
+            <HStack spacing={4}>
+              <a
+                href="#projects"
+                onClick={handleClick("projects")}
+                style={{ textDecoration: "none" }}
+              >
+                <Text color="white">Projects</Text>
+              </a>
+              <a
+                href="#contact-me"
+                onClick={handleClick("contactme")}
+                style={{ textDecoration: "none" }}
+              >
+                <Text color="white">Contact Me</Text>
+              </a>
             </HStack>
           </nav>
         </HStack>
@@ -81,4 +99,5 @@ const Header = () => {
     </Box>
   );
 };
+
 export default Header;

@@ -11,6 +11,7 @@ import {
   Select,
   Textarea,
   VStack,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 import emailjs from "emailjs-com"
 import * as Yup from 'yup';
@@ -20,6 +21,7 @@ import { useAlertContext } from "../context/alertContext";
 const ContactMeSection = () => {
   const { onOpen } = useAlertContext();
   const form = useRef();
+  const isMobile = useBreakpointValue({ base: true, md: false });
 
   const {errors, touched, handleSubmit, getFieldProps, resetForm } = useFormik({
     initialValues: {
@@ -51,15 +53,15 @@ const ContactMeSection = () => {
     <FullScreenSection
       isDarkBackground
       backgroundColor="#2f2a65"
-      py={8}
+      py={[4, 8, 12]}
       spacing={8}
       alignItems="center"
     >
-      <VStack w="600px" p={8} alignItems="center">
-        <Heading as="h1" id="contactme-section">
+      <VStack w={["100%", "100%", "600px"]} p={4} alignItems="center">
+        <Heading as="h1" id="contactme-section" size={isMobile ? "lg" : "2xl"}>
           Contact me
         </Heading>
-        <Box p={6} rounded="md" w="100%">
+        <Box p={4} rounded="md" w="100%">
           <form ref={form} onSubmit={handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={errors.firstName && touched.firstName}>
@@ -102,7 +104,7 @@ const ContactMeSection = () => {
                 <Textarea
                   id="comment"
                   name="comment"
-                  height={150}
+                  height={isMobile ? "100px" : "150px"}
                   placeholder="Comment..."
                   {...getFieldProps("comment")}
                 />

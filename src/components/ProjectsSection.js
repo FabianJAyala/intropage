@@ -35,17 +35,17 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const columns = useBreakpointValue({ base: 1, md: 2 }); // 1 column on mobile, 2 columns on larger screens
+  const columns = useBreakpointValue({ base: 1, sm: 2, md: 2, lg: 2 });
 
   return (
     <FullScreenSection
       backgroundColor="#2A4365"
       isDarkBackground
-      p={20}
+      p={[10, 20]}
       alignItems="center"
       spacing={8}
     >
-      <Heading as="h1" id="projects-section" size="xl">
+      <Heading as="h1" id="projects-section" size={["lg", "2xl"]}>
         Featured Projects
       </Heading>
       <Box
@@ -60,6 +60,7 @@ const ProjectsSection = () => {
             description={project.description}
             imageSrc={project.getImageSrc()}
             link={project.link}
+            maxDescriptionLines={2}
           />
         ))}
       </Box>
