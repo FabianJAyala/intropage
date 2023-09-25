@@ -52,7 +52,7 @@ function DataTabs({ data }) {
           </Tab>
         ))}
       </TabList>
-      <TabPanels>
+      <TabPanels paddingY={8}>
         {data.map((tab, index) => (
           <TabPanel p={4} key={index} display="flex" justifyContent="center" alignItems="center">
             <Card maxW={cardMaxWidth}>

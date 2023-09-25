@@ -52,7 +52,7 @@ const ContactMeSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#2f2a65"
+      backgroundColor="#2a6165"
       py={[4, 8, 12]}
       spacing={8}
       alignItems="center"
@@ -88,13 +88,13 @@ const ContactMeSection = () => {
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
                 <Select id="type" name="type" {...getFieldProps("type")}>
-                  <option value="hireMe" style={{ backgroundColor: "#433f74", color: "white" }}>
+                  <option value="hireMe" style={{ backgroundColor: "#38A169", color: "white" }}>
                     Freelance project proposal
                   </option>
-                  <option value="openSource" style={{ backgroundColor: "#433f74", color: "white" }}>
+                  <option value="openSource" style={{ backgroundColor: "#38A169", color: "white" }}>
                     Full-time job proposal
                   </option>
-                  <option value="other" style={{ backgroundColor: "#433f74", color: "white" }}>
+                  <option value="other" style={{ backgroundColor: "#38A169", color: "white" }}>
                     Other
                   </option>
                 </Select>
@@ -110,7 +110,7 @@ const ContactMeSection = () => {
                 />
                 <FormErrorMessage>{errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button type="submit" colorScheme="green" width="full">
                 Submit
               </Button>
             </VStack>

@@ -5,13 +5,6 @@ import CardTemplate from "./CardTemplate";
 
 const projects = [
   {
-    title: "Little Lemon Website",
-    description:
-      "Front End Developer Project Capstone, for the Little Lemon Restaurant.",
-    getImageSrc: () => require("../images/Little-Lemon-Page.jpg"),
-    link: "https://github.com/FabianJAyala/project_capstone",
-  },
-  {
     title: "Adri Magic Planner Website",
     description:
       "First Project as a Front End Developer, website developed with React for a Disney and Universal Agency.",
@@ -31,6 +24,27 @@ const projects = [
       "Website made for a logistics company in La Paz - Bolivia.",
     getImageSrc: () => require("../images/Cache-Logistica-Website.jpg"),
     link: "https://cache.uneedwedo.com/cache-servicios-logisticos/",
+  },
+  {
+    title: "Little Lemon: React Font-end Project Capstone",
+    description:
+      "Front End Developer Project Capstone for the Little Lemon Restaurant.",
+    getImageSrc: () => require("../images/Little-Lemon-Front-End-Capstone.png"),
+    link: "https://github.com/FabianJAyala/project_capstone",
+  },
+  {
+    title: "Little Lemon: DRF Restaurant API",
+    description:
+      "API developed for the Little Lemon Restaurant using Django REST Framework.",
+    getImageSrc: () => require("../images/Little-Lemon-DRF-Project.png"),
+    link: "https://github.com/FabianJAyala/project_capstone",
+  },
+  {
+    title: "Little Lemon: Django Back-end Project Capstone",
+    description:
+      "Front End Developer Project Capstone for the Little Lemon Restaurant.",
+    getImageSrc: () => require("../images/Little-Lemon-Back-End-Capstone.png"),
+    link: "https://github.com/FabianJAyala/LittleLemonBackEndCapstone",
   },
 ];
 

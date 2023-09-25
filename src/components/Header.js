@@ -7,7 +7,7 @@ import useScrollDirection from "../hooks/useScrollDirection";
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: fabiajoseayalavargas@gmail.com",
+    url: "mailto: fabian_jose_ayala_vargas@hotmail.com",
   },
   {
     icon: faGithub,
