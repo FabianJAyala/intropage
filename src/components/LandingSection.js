@@ -55,10 +55,10 @@ const LandingSection = () => {
           </Heading>
         </VStack>
         <VStack>
-          <Heading as="h2" size={isMobile ? "md" : "xl"} noOfLines={1}>
+          <Heading as="h2" size={isMobile ? "sm" : "xl"} noOfLines={1}>
             {bio1}
           </Heading>
-          <Heading as="h2" size={isMobile ? "md" : "xl"} noOfLines={1}>
+          <Heading as="h2" size={isMobile ? "sm" : "xl"} noOfLines={1}>
             {bio2}
           </Heading>
         </VStack>
@@ -66,7 +66,7 @@ const LandingSection = () => {
           <Heading as="h2" size={isMobile ? "md" : "lg"} noOfLines={1}>
             About Me
           </Heading>
-          <Text maxW="560px" noOfLines={isMobile ? 5 : 3}>
+          <Text maxW="560px" noOfLines={isMobile ? 6 : 3}>
             {aboutme}
           </Text>
         </VStack>

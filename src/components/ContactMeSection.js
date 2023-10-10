@@ -53,7 +53,7 @@ const ContactMeSection = () => {
     <FullScreenSection
       isDarkBackground
       backgroundColor="#2a6165"
-      py={[4, 8, 12]}
+      py={[4, 8, 4]}
       spacing={8}
       alignItems="center"
     >
@@ -63,7 +63,7 @@ const ContactMeSection = () => {
         </Heading>
         <Box p={4} rounded="md" w="100%">
           <form ref={form} onSubmit={handleSubmit}>
-            <VStack spacing={4}>
+            <VStack>
               <FormControl isInvalid={errors.firstName && touched.firstName}>
                 <FormLabel htmlFor="firstName">Name</FormLabel>
                 <Input

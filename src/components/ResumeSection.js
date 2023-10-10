@@ -34,7 +34,8 @@ const jobs = [
 
 function DataTabs({ data }) {
   const cardMaxWidth = useBreakpointValue({ base: "100%", md: "500px" });
-
+  const tabLabelFontSize = useBreakpointValue({ base: "sm", md: "lg" });
+  const buttonFontSize = useBreakpointValue({ base: "sm", md: "md" });
   return (
     <Tabs variant="soft-rounded">
       <TabList>
@@ -45,6 +46,7 @@ function DataTabs({ data }) {
               color: "white",
               textDecor: "none",
               _selected: { color: "white", bg: "#429699" },
+              fontSize: tabLabelFontSize,
             }}
             textAlign="center"
           >
@@ -85,7 +87,9 @@ function DataTabs({ data }) {
                 sx={{
                   "& > button": {
                     flex: "1",
-                    minWidth: "100px",
+                    minWidth: "0",
+                    width: "33.33%",
+                    fontSize: buttonFontSize,
                   },
                 }}
               >
