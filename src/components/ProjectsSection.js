@@ -37,12 +37,12 @@ const projects = [
     description:
       "API developed for the Little Lemon Restaurant using Django REST Framework.",
     getImageSrc: () => require("../images/Little-Lemon-DRF-Project.png"),
-    link: "https://github.com/FabianJAyala/project_capstone",
+    link: "https://github.com/FabianJAyala/LittleLemonAPI",
   },
   {
     title: "Little Lemon: Django Back-end Project Capstone",
     description:
-      "Front End Developer Project Capstone for the Little Lemon Restaurant.",
+      "Back End Developer Project Capstone for the Little Lemon Restaurant.",
     getImageSrc: () => require("../images/Little-Lemon-Back-End-Capstone.png"),
     link: "https://github.com/FabianJAyala/LittleLemonBackEndCapstone",
   },
